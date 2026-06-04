@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta class="Music">
+    <meta namespace="ESAT">
+    <meta name="description" content="Tiano_Productions es una empresa de producción musical especializada en la creación de mezclas personalizadas para eventos como bodas, bautizos, cumpleaños y otras celebraciones. Con un enfoque en la calidad y la satisfacción del cliente, Tiano Productions ofrece una amplia variedad de estilos musicales para adaptarse a las preferencias de cada cliente. Desde mezclas de technopop hasta reguetton/dembow, Tiano_Productions se dedica a crear experiencias musicales únicas que harán que cualquier evento sea inolvidable.">
+    <meta name="author" content="Christian Pi Dumitrascu">
+    <meta name="keywords" content="DJ, producción musical, mezclas personalizadas, eventos, bodas, bautizos, cumpleaños y otras celebraciones, DJ Tiano, Tianoporductions">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiano_Productions</title>
+    <style>
+        @font-face {
+            font-family: 'Pirata One';
+            src: url('PirataOne-Regular.css');
+        }
+
+        body {
+            background-color: black;
+            font-family: 'Pirata One', Arial, sans-serif;
+            margin: 0;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+
+        header img {
+            width: 160px;
+            height: 160px;
+            float: left;
+            margin: 10px 20px;
+        }
+
+        nav table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 2px solid purple;
+        }
+
+        nav a {
+            color: inherit;
+            text-decoration: none;
+            display: block;
+            padding: 12px 18px;
+        }
+
+        nav td {
+            border-left: 1px solid purple;
+        }
+
+        nav td:first-child {
+            border-left: none;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+          
+            margin-bottom: 30px;
+        }
+
+        section table {
+            width: 100%;
+            max-width: 1100px;
+            background-color: black;
+            border: 2px solid currentColor;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        section th,
+        section td {
+            padding: 12px;
+            color: white;
+        }
+
+        section th {
+            font-size: 1.4rem;
+            text-align: left;
+            border-bottom: 2px solid currentColor;
+        }
+
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .videos table {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .videos img,
+        .videos video,
+        .videos iframe {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            aspect-ratio: 16 / 9;
+        }
+
+        .videos table td {
+            padding: 0;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 0 10px;
+        }
+
+        .contact-form label,
+        .contact-form button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form input[type="tel"],
+        .contact-form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 2px solid greenyellow;
+            background: black;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="radio"] {
+            display: inline-block;
+            width: auto;
+            margin: 0 8px 10px 0;
+            vertical-align: middle;
+
+        }
+
+        .contact-form .radio-label {
+            display: inline-block;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .contact-form a[href^="mailto:"],
+        .contact-form button {
+            padding: 12px;
+            border: 2px solid greenyellow;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+            box-sizing: border-box;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+        }
+
+        @media (max-width: 800px) {
+            header img {
+                float: none;
+                margin: 0 auto 20px;
+            }
+
+            nav table {
+                width: 100%;
+            }
+
+            nav td {
+                display: block;
+                border-left: none;
+                border-top: 1px solid purple;
+            }
+
+            nav td:first-child {
+                border-top: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .videos {
+                display: block;
+            }
+
+            .videos table,
+            .videos table tr,
+            .videos table td {
+                display: block;
+                width: 100%;
+            }
+
+            .videos table td {
+                padding: 0;
+            }
+
+            .videos iframe {
+                max-width: 100%;
+            }
+        }
+
+        /* Responsive privacy policy table */
+        .privacy-table {
+            width: 100%;
+            max-width: 1100px;
+            margin: 20px auto 0;
+            border-collapse: collapse;
+            background-color: transparent;
+            display: table;
+            border: 2px solid; /* preserve color from inline style */
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        .privacy-table td {
+            padding: 12px;
+            color: white;
+            vertical-align: top;
+            box-sizing: border-box;
+            word-break: break-word;
+        }
+
+        @media (max-width: 600px) {
+            .privacy-table {
+                display: block;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+                border: 2px solid; /* keep outer border (color via inline style) */
+                border-radius: 6px;
+                padding: 6px;
+            }
+
+            .privacy-table tr {
+                display: block;
+                width: 100%;
+            }
+
+            .privacy-table td {
+                display: block;
+                width: 100%;
+                padding: 10px 8px;
+                border-top: 1px solid rgba(255,255,255,0.06);
+            }
+
+            .privacy-table td:first-child {
+                border-top: none;
+            }
+
+            .privacy-table td p {
+                margin-bottom: 0.8rem;
+            }
+
+            .privacy-table a {
+                word-break: break-word;
+                color: #00e676;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img style="position:center;" src="./Images/Tiano_icon.png" alt="Logo DJ Tiano">
+        <nav>
+            <table position="center" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td><a href="#Sobre mi" style="color: red;">Sobre mi</a></td>
+                    <td><a href="#Videos" style="color: yellow;">Videos</a></td>
+                    <td><a href="#Contacto" style="color: greenyellow;">Contacto</a></td>
+                </tr>
+            </table>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Sobre mi">
+            <table style="border-color: red;">
+                <tr><th>Sobre mí</th></tr>
+                <tr>
+                    <td>Desde que tengo memoria, la música ha sido mi compañera inseparable. Mi nombre es DJ Tiano, y mi pasión por los ritmos y las melodías me ha llevado a convertirme en un DJ profesional con una amplia experiencia en la industria musical.</td>
+                </tr>
+                <tr>
+                    <td>Si buscas una experiencia musical que haga vibrar cada rincón, DJ Tiano es la elección perfecta. Con un estilo versátil y una energía única, llevo cada sesión a otro nivel, conectando con el público desde el primer beat.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li>Reguetton</li>
+                            <li>Dembow</li>
+                            <li>Techno-pop</li>
+                            <li>Remember de los 90'</li>
+                            <li>Hardcore</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pero no solo mezclo… la música forma parte de mí. También toco el piano y la guitarra, tanto clásica como eléctrica, lo que me permite entender cada sonido y crear sesiones con alma propia.</td>
+                </tr>
+                <tr>
+                    <td>Cada mezcla cuenta una historia, cada transición transmite emoción. Porque para mí, esto no es solo pinchar música… es vivirla.</td>
+                </tr>
+                <tr>
+                    <td>DJ Tiano – Donde el ritmo no se escucha, <b>se siente.</b></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="Videos" class="videos">
+            <table style="border-color: yellow;">
+                <tr><th>Videos</th></tr>
+                <tr>
+                    <td style="text-align:center;">Pioneer DJ</td>
+                </tr>
+                <tr>
+                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/w2b-FEWqEdU?si=R5ieLm6B7T58mFFn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/QLBl4IyabKQ?si=FrtmfONy5xqkxQfk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center; font-size:20px;">Piano</td>
+                </tr>
+                <tr>
+                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/eLqObfhZP90?si=nc7-9SkPqajWOvo1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+                    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/NviDWVlSjgQ?si=yZdC4vIZDJBUcNrf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="Contacto">
+            <table style="border-color: greenyellow;">
+                <tr><th>Contacto</th></tr>
+                <tr>
+                    <td>
+                        <form method="post" action="https://formsubmit.co/tianoproductions314@gmail.com" style="border-color: greenyellow;" class="contact-form">
+                            <label for="fname">Pon tu nombre</label>
+                            <input type="text" id="fname" name="fname" required>
+
+                            <label for="lname">Pon tus apellidos</label>
+                            <input type="text" id="lname" name="lname" required>
+
+                            <label for="email">Pon tu correo electrónico</label>
+                            <input type="email" id="email" name="email" required>
+                            <label for="datetime">¿Que día y hora sería el evento?</label>
+                            <input type="datetime-local" id="datetime" name="datetime" required>
+                            <p>¿Qué tipo de evento te interesa?</p>
+                            <label for="Event_type1">Bodas y Bautizos</label>
+                            <input style="display: inline-block;" type="radio" id="Event_type1" name="event_type" value="Bodas y Bautizos" required>
+                          
+                            
+                            <label for="Event_type2">Cumpleaños</label>
+                            <input type="radio" id="Event_type2" name="event_type" value="Cumpleaños" required>
+                            
+                            <label for="Event_type3">Otras celebraciones</label>
+                            <input type="radio" id="Event_type3" name="event_type" value="Cumpleaños" required>
+                            <input type="text" id="Event_type3" name="Tipo de celebración" optional>
+
+                            <label for="Event_type4">Cosas a tener en cuenta? (Tipo de música en específico, alguna cosa prioritária, etc) </label>
+                            <input type="text" id="Event_type4" name="Debería tener algo en cuenta?" optional>
+
+                             <button type="submit">Enviar</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <table class="privacy-table" style="border-color: green; margin-top: 20px;">
+                <tr>
+                    <td><p><strong>POLÍTICA DE PRIVACIDAD</strong></p>
+    <p>El presente Política de Privacidad establece los términos en que Tiano Productions usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p><p><strong>Información que es recogida</strong></p>
+    <p>Nuestro sitio web podrá recoger información personal por ejemplo: Nombre,&nbsp; información de contacto como&nbsp; su dirección de correo electrónica e información demográfica. Así mismo cuando sea necesario podrá ser requerida información específica para procesar algún pedido o realizar una entrega o facturación.</p>
+    <p><strong>Uso de la información recogida</strong></p>
+    <p>Nuestro sitio web emplea la información con el fin de proporcionar el mejor servicio posible, particularmente para mantener un registro de usuarios, de pedidos en caso que aplique, y mejorar nuestros productos y servicios. &nbsp;Es posible que sean enviados correos electrónicos periódicamente a través de nuestro sitio con ofertas especiales, nuevos productos y otra información publicitaria que consideremos relevante para usted o que pueda brindarle algún beneficio, estos correos electrónicos serán enviados a la dirección que usted proporcione y podrán ser cancelados en cualquier momento.</p>
+    <p>Tiano Productions está altamente comprometido para cumplir con el compromiso de mantener su información segura. Usamos los sistemas más avanzados y los actualizamos constantemente para asegurarnos que no exista ningún acceso no autorizado.</p><p><strong>Cookies</strong></p>
+    <p>Una cookie se refiere a un fichero que es enviado con la finalidad de solicitar permiso para almacenarse en su ordenador, al aceptar dicho fichero se crea y la cookie sirve entonces para tener información respecto al tráfico web, y también facilita las futuras visitas a una web recurrente. Otra función que tienen las cookies es que con ellas las web pueden reconocerte individualmente y por tanto brindarte el mejor servicio personalizado de su web.</p>
+    <p>Nuestro sitio web emplea las cookies para poder identificar las páginas que son visitadas y su frecuencia. Esta información es empleada únicamente para análisis estadístico y después la información se elimina de forma permanente. Usted puede eliminar las cookies en cualquier momento desde su ordenador. Sin embargo las cookies ayudan a proporcionar un mejor servicio de los sitios web, estás no dan acceso a información de su ordenador ni de usted, a menos de que usted así lo quiera y la proporcione directamente <a href="https://noticiasvillarrealcf.es/" target="_blank">noticias</a>. Usted puede aceptar o negar el uso de cookies, sin embargo la mayoría de navegadores aceptan cookies automáticamente pues sirve para tener un mejor servicio web. También usted puede cambiar la configuración de su ordenador para declinar las cookies. Si se declinan es posible que no pueda utilizar algunos de nuestros servicios.</p>
+    <p><strong>Enlaces a Terceros</strong></p>
+    <p>Este sitio web pudiera contener en laces a otros sitios que pudieran ser de su interés. Una vez que usted de clic en estos enlaces y abandone nuestra página, ya no tenemos control sobre al sitio al que es redirigido y por lo tanto no somos responsables de los <a href="https://plantillaterminosycondicionestiendaonline.com/" target="_blank">términos o privacidad</a> ni de la protecciónde sus datos en esos otros sitios terceros. Dichos sitios están sujetos a sus propias políticasde privacidad por lo cual es recomendableque los consulte para confirmarque usted estáde acuerdocon estas.</p>
+    <p><strong>Controlde su información personal</strong></p>
+    <p>En cualquier momento usted puede restringir la recopilación o el uso_de_la_información_personal_que_es_proporcionada_a_nuestro_sitio_web.&nbsp; Cada vez_que_se_le_solicite_rellenar_un_formulario,_como_el_de_alta_de_usuario,_ puede marcar o desmarcar_la_opción_de_recibir_información_por_correo_electrónico. &nbsp;En_caso_de_que_haya_marca_la_opción_de_recibir_nuestro_boletín_o_publicidad_usted_puede_cancelarla_en_cualquier_momento.</p>
+    <p>Esta compañía no venderá, cederá ni distribuirá la información personal que es recopilada sin su consentimiento, salvo_que_sea_requerido_por_un_juez_con_un_orden_judicial.</p>
+    <p>Tiano Productions Se reserva el derecho_de_cambiar_los_términos_de_la_presente_Política_de_Privacidad_en_cualquier_momento.</p>
+    <p>Esta politica_de_privacidad_se_han_generado_en <a href="https://politicadeprivacidadplantilla.com/" target="_blank">politicadeprivacidadplantilla.com</a>.<br></p></td>
+    </tr>
+            </table>
+
+    <footer style="text-align: center;">
+        <p><a href="cv.html" target="_blank" style="color: white;">Trabajo académico hecho por Christian Pi Dumitrascu</a></p>
+        <p>© 2026 Tianoproductions. Todos los derechos reservados.</a></p>
+        <p style="color: white;"><a href="https://www.youtube.com/@Tiano_Productions" style="color: white; text-decoration: underline;">Sígueme en YouTube</a></p>
+    </footer>
+</body>
+</html>
